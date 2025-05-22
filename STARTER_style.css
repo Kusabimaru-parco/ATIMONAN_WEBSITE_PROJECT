@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Push to right */
+    align-items: stretch;      /* Stretch to full height */
+    text-align: center;
+    margin: 0;
+}
+.BG-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+.selection {
+    position:relative;
+    width: 30%;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center content vertically */
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+}
+
+.selection .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Mulish', Arial, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: 'Mulish', Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button a {
+    background-color: #129F29;
+    color: white;
+    padding: 12px 24px;
+    width: 160px; 
+    text-align: center; 
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button a:hover {
+    background-color: #c62828;
+}
+
+.datetime-flag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.ph-flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .selection {
+        width: 100%;
+        border-radius: 0;
+    }
+}
